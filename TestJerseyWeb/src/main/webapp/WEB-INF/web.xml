@@ -10,6 +10,18 @@
   	<servlet-name>PredictionsServlet</servlet-name>
   	<servlet-class>predictions2.PredictionsServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>RestletServlet</servlet-name>
+  	<servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+  	<init-param>
+  		<param-name>org.restlet.application</param-name>
+  		<param-value>adages2.AdagesApplication</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RestletServlet</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>PredictionsServlet</servlet-name>
   	<url-pattern>/predictions2</url-pattern>

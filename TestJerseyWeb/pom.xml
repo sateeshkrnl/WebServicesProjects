@@ -13,7 +13,13 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+	<repositories>
+	    <repository>
+	        <id>maven-restlet</id>
+	        <name>Restlet repository</name>
+	        <url>https://maven.restlet.com</url>
+	    </repository>
+	</repositories>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -36,6 +42,36 @@
         	<artifactId>jackson-databind</artifactId>
         	<version>2.7.3</version>
         </dependency>
+        <dependency>
+	        <groupId>org.restlet.jee</groupId>
+	        <artifactId>org.restlet</artifactId>
+	        <version>2.3.6</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.restlet.jee</groupId>
+	        <artifactId>org.restlet.ext.json</artifactId>
+	        <version>2.3.6</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.restlet.jee</groupId>
+	        <artifactId>org.restlet.ext.xml</artifactId>
+	        <version>2.3.6</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.restlet.jee</groupId>
+	        <artifactId>org.restlet.ext.servlet</artifactId>
+	        <version>2.3.6</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.restlet.jee</groupId>
+	        <artifactId>org.restlet.ext.jaxb</artifactId>
+	        <version>2.3.6</version>
+	    </dependency>
+	    <dependency>
+	    	<groupId>org.glassfish.metro</groupId>
+	    	<artifactId>webservices-rt</artifactId>
+	    	<version>2.3.1</version>
+	    </dependency>
     </dependencies>
 
     <build>
