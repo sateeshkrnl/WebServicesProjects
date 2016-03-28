@@ -19,7 +19,7 @@ public class Adages {
 		"Philosophy is a battle against the bewitchment of our intelligence by means of language.",
 		"Ambition is the death of thought.",
 		"The limits of my language mean the limits of my world."};
-		adages = new CopyOnWriteArrayList<>();
+		adages = new CopyOnWriteArrayList<Adage>();
 		id = new AtomicInteger();
 		for(String str: aphorisms){
 			add(str);

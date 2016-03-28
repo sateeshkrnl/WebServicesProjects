@@ -43,20 +43,18 @@ public class AdagesProvider implements Provider<Source> {
 			throw new RuntimeException("Injection failed on webservice context");
 		MessageContext msgCtx = webServiceCtx.getMessageContext();
 		String httpVerb = (String) msgCtx.get(MessageContext.HTTP_REQUEST_METHOD);
-		switch (httpVerb) {
-		case "GET":
+		if ("GET".equalsIgnoreCase(httpVerb)) {
 			response = this.doGet(msgCtx);
-			break;
-		case "POST":
+		}else
+		if ("POST".equalsIgnoreCase(httpVerb)) {
 			response = this.doPost(request);
-			break;
-		case "PUT":
+		}else
+		if ("PUT".equalsIgnoreCase(httpVerb)) {
 			response = this.doPut(request);
-			break;
-		case "DELETE":
+		}else
+		if ("DELETE".equalsIgnoreCase(httpVerb)) {
 			response = this.doDelete(msgCtx);
-			break;
-		default:
+		} else {
 			throw new HTTPException(405);
 		}
 		return response;
